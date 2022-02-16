@@ -19,6 +19,8 @@
   /* bg colors */
   --primary-bg_mode-light: #f7f7f7;
   --primary-bg_mode-dark: #191c26;
+
+  /* --indent: 30px; */
 }
 
 /* Common styles */
@@ -31,6 +33,23 @@ body {
   color: var(--primary-txt_mode-light);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .link {
   text-decoration: none;
   color: currentColor;
@@ -38,10 +57,27 @@ body {
 
 .list {
   list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .address {
   font-style: normal;
+}
+
+.section {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 1px solid red;
 }
 
 .uppertitle {
@@ -92,6 +128,10 @@ body {
 }
 
 .btn {
+  min-width: 160px;
+  max-width: 350px;
+  padding: 12px 20px;
+
   font-family: inherit;
   font-weight: 600;
   font-size: 12px;
@@ -99,6 +139,9 @@ body {
   letter-spacing: 0.09em;
   text-transform: uppercase;
   background-color: transparent;
+
+  border: 1px solid var(--accent-cl);
+  border-radius: 25px;
 
   cursor: pointer;
 }
@@ -125,12 +168,71 @@ body {
 
 /* Header section */
 .header {
+  /* padding: 32px 0; */
   background-color: #191c26;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-link {
+  margin-right: 70px;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.nav-link,
+.header-phone {
+  display: block;
+  padding: 52px 0;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.header-phone:hover,
+.header-phone:focus {
+  color: var(--accent-cl);
+}
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.header-phone {
+  margin-right: 40px;
 }
 
 /* Hero section */
 .hero {
   background-color: #191c26;
+}
+
+.hero-list {
+  display: flex;
+  align-items: center;
+}
+
+.hero-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.hero-uppertitle {
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  margin-bottom: 20px;
 }
 
 .hero-link {
@@ -151,6 +253,10 @@ body {
   color: var(--secondary-txt_mode-dark);
 }
 
+.hero-subtitle {
+  width: 486px;
+}
+
 .hero-btn {
   font-weight: 600;
   font-size: 11px;
@@ -160,6 +266,10 @@ body {
   color: var(--secondary-txt_mode-dark);
   background-color: transparent;
   cursor: pointer;
+}
+
+.hero-btn:not(:last-child) {
+  margin-right: 26px;
 }
 
 .hero-btn.disable {

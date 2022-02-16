@@ -19,26 +19,38 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
       rel="stylesheet"
     />
+    <!-- Normalize styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css" />
     <!-- Main styles -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <!-- Header section -->
     <header class="header">
-      <a class="header-link link" href="./index.html">
-        <img class="header-img" src="./images/icons/logo.svg" alt="Логотип" width="70" height="56" />
-      </a>
-      <nav>
-        <ul class="list">
-          <li><a class="link" href="">О нас</a></li>
-          <li><a class="link" href="">Услуги и цены</a></li>
-          <li><a class="link" href="">Мастера</a></li>
-          <li><a class="link" href="">Контакты</a></li>
-        </ul>
-      </nav>
-      <div>
-        <a class="link" href="tel:+380441111111">+38 044 111 11 11</a>
-        <button class="btn btn-mode-dark" type="button">онлайн-запись</button>
+      <div class="container header-container">
+        <a class="header-link link" href="./index.html">
+          <img class="header-img" src="./images/icons/logo.svg" alt="Логотип" width="70" height="56" />
+        </a>
+        <nav class="nav">
+          <ul class="nav-list list">
+            <li class="nav-item">
+              <a class="nav-link link" href="">О нас</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link" href="">Услуги и цены</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link" href="">Мастера</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link" href="">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-wrapper">
+          <a class="header-phone link" href="tel:+380441111111">+38 044 111 11 11</a>
+          <button class="btn btn-mode-dark" type="button">онлайн-запись</button>
+        </div>
       </div>
     </header>
 
@@ -46,24 +58,29 @@
     <main>
       <!-- Hero section -->
       <section class="hero">
-        <ul class="list">
-          <li class="item">
-            <a class="hero-link link" href="" lang="en">Instagram</a>
-          </li>
-          <li class="item">
-            <a class="hero-link link" href="" lang="en">Youtube</a>
-          </li>
-        </ul>
-        <p class="uppertitle uppertitle-mode-dark" lang="en">A hair salon for men in Kyiv</p>
-        <h1 class="hero-title" lang="en">BarberShop</h1>
-        <h2 class="subtitle subtitle-mode-dark">Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со вкусом.</h2>
-        <div>
-          <button class="hero-btn disable" type="button">Назад</button>
-          <button class="hero-btn" type="button">Вперед</button>
+        <div class="container">
+          <ul class="hero-list list">
+            <li class="hero-item item">
+              <a class="hero-link link" href="" lang="en">Instagram</a>
+            </li>
+            <li class="hero-item item">
+              <a class="hero-link link" href="" lang="en">Youtube</a>
+            </li>
+          </ul>
+          <p class="hero-uppertitle uppertitle uppertitle-mode-dark" lang="en">A hair salon for men in Kyiv</p>
+          <h1 class="hero-title" lang="en">BarberShop</h1>
+          <h2 class="hero-subtitle subtitle subtitle-mode-dark">
+            Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со вкусом.
+          </h2>
+          <div>
+            <button class="hero-btn disable" type="button">Назад</button>
+            <button class="hero-btn" type="button">Вперед</button>
+          </div>
         </div>
       </section>
       <!-- About us section -->
-      <section class="about">
+      <section class="about section">
+        <div class="container">
         <ul class="list">
           <li>
             <img src="./images/about-us/img-1.jpg" alt="Стрижка бороды" width="270" height="445" />
@@ -74,16 +91,20 @@
         </ul>
         <p class="uppertitle uppertitle-mode-light">О НАС</p>
         <h2 class="title title-mode-light">Лучший Барбершоп твоего города</h2>
-        <h3 class="subtitle subtitle-mode-light">Если ты хочешь добавить в свой образ больше уверенности – тебе точно к нам.</h3>
+        <h3 class="subtitle subtitle-mode-light">
+          Если ты хочешь добавить в свой образ больше уверенности – тебе точно к нам.
+        </h3>
         <p>
           Мы команда, которая никогда не останавливается на достигнутом и жаждет перемен. И когда ты попадешь в руки
           нашего мастера, то уже никогда не сможешь быть прежним. Мы команда, которая всегда с клиентами "на одной
           волне". Поэтому, мы всегда готовы усовершенствовать каждого, кто к нам приходит!
         </p>
         <button class="btn btn-mode-light" type="button">онлайн-запись</button>
+      </div>
       </section>
       <!-- Services section -->
-      <section class="services">
+      <section class="services section">
+        <div class="container">
         <p class="uppertitle uppertitle-mode-dark">Проведи время в компании лучших мастеров</p>
         <h2 class="title title-mode-dark">Услуги и цены</h2>
         <ul class="services-list list">
@@ -99,9 +120,11 @@
           <li><span>Камуфлирование седины</span><span>от 200 грн.</span></li>
         </ul>
         <button class="btn btn-mode-dark" type="button">онлайн-запись</button>
+      </div>
       </section>
       <!-- Why us section -->
-      <section class="why">
+      <section class="why section">
+        <div class="container">
         <ul class="why-list list">
           <li class="why-item">
             <p class="why-quantity">600</p>
@@ -122,12 +145,16 @@
         </ul>
         <p class="uppertitle uppertitle-mode-light">старая традиционная школа</p>
         <h2 class="title title-mode-light">Почему приходят именно к нам?</h2>
-        <h3 class="subtitle subtitle-mode-light">О нас говорят только хорошее. Но лучше 1 раз увидеть и прочувствовать, чем 10 раз прочитать.</h3>
+        <h3 class="subtitle subtitle-mode-light">
+          О нас говорят только хорошее. Но лучше 1 раз увидеть и прочувствовать, чем 10 раз прочитать.
+        </h3>
+      </div>
       </section>
       <!-- Team section -->
-      <section class="team">
+      <section class="team section">
+        <div class="container">
         <p class="uppertitle uppertitle-mode-light">для настоящих ценителей атмосферы</p>
-        <h2  class="title title-mode-light">Наши мастера</h2>
+        <h2 class="title title-mode-light">Наши мастера</h2>
         <ul class="team-list list">
           <li class="team-item">
             <img class="team-avatar" src="./images/team/member-1.jpg" alt="Главный барбер" width="370" height="346" />
@@ -235,9 +262,11 @@
             </ul>
           </li>
         </ul>
+        </div>
       </section>
       <!-- Portfolio section -->
-      <section class="portfolio">
+      <section class="portfolio section">
+        <div class="container">
         <p class="uppertitle uppertitle-mode-light">На латинском языке “барба” означает “борода”</p>
         <h2 hidden>Портфолио работ</h2>
         <ul class="list">
@@ -254,9 +283,11 @@
             <img src="./images/portfolio/img-4.jpg" alt="Стрижка опасной бритвой" width="270" height="360" />
           </li>
         </ul>
+        </div>
       </section>
       <!-- Contacts section -->
-      <section class="contacts">
+      <section class="contacts section">
+        <div class="container">
         <h2 hidden>Онлайн-запись</h2>
         <article class="contacts-left-side">
           <h3 class="title title-mode-dark">Онлайн-запись</h3>
@@ -272,24 +303,34 @@
           <address class="address">
             <ul class="address-list list">
               <li class="address-item">
-                <a class="address-link link" href="https://goo.gl/maps/AAhjQ7b2pQGy2dwU6" target="_blank" rel="noopener noreferrer"
+                <a
+                  class="address-link link"
+                  href="https://goo.gl/maps/AAhjQ7b2pQGy2dwU6"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   >ул. Васильковая, 7А Киев, 08132</a
                 >
               </li>
               <li class="address-item"><a class="address-link link" href="tel:+380441111111">+38 044 111 11 11</a></li>
-              <li class="address-item"><a class="address-link link" href="mailto:barbershop@email.com">barbershop@email.com</a></li>
+              <li class="address-item">
+                <a class="address-link link" href="mailto:barbershop@email.com">barbershop@email.com</a>
+              </li>
             </ul>
           </address>
           <div>
             <p class="uppertitle uppertitle-mode-dark">время работы</p>
-            <p class="address-time">Ежедневно с <time datetime="09:00">9:00</time> до <time datetime="22:00">22:00</time></p>
+            <p class="address-time">
+              Ежедневно с <time datetime="09:00">9:00</time> до <time datetime="22:00">22:00</time>
+            </p>
           </div>
         </article>
+        </div>
       </section>
     </main>
 
     <!-- Footer section -->
     <footer class="footer">
+      <div class="container">
       <p class="footer-copyright">&#169; Copyright 2020</p>
       <ul class="footer-list list">
         <li class="footer-item">
@@ -299,6 +340,7 @@
           <a class="footer-link link" href="">Youtube</a>
         </li>
       </ul>
+      </div>
     </footer>
   </body>
 </html>
