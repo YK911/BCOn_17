@@ -302,15 +302,34 @@ img {
 .services {
   background-color: var(--primary-bg_mode-dark);
 }
+.services-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
 
 .services-list {
+  /* width: 585px; */
+  flex-basis: 50%;
+  padding: 30px 40px;
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
-
+outline: 1px solid  tomato;
   color: var(--main-txt_mode-dark);
 }
+.services-item {
+  display: flex;
+  justify-content: space-between;
+}
 
+.services-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+.services-button {
+  display: block;
+  margin: auto;
+}
 /* Why us section */
 .why-item {
   color: var(--secondary-txt_mode-light);
