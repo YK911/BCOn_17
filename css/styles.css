@@ -1,14 +1,14 @@
-.btn {
-  /* display: block;
+/* .btn {
+display: block;
   width: 50px;
   height: 50px;
-  border-radius: 50%; */
-}
+  border-radius: 50%;
+} */
 
-ul {
+/* ul {
   margin: 0;
   padding: 0;
-  list-style: none ;
+  list-style: none;
 }
 
 h1,
@@ -26,38 +26,38 @@ p {
   outline: 2px dashed navy;
   padding-bottom: 20px;
   margin-bottom: 50px;
-}
+} */
 
-.text {
+/* .text {
   padding-top: 30px;
   margin: 0;
-  /* width: 250px;
+  width: 250px;
   height: 250px;
   padding: 50px;
   border: 10px solid rgb(137, 139, 42);
-*/
+
   outline: 1px solid red;
-}
+} */
 
-.item {
-  /* border: 10px solid black;
-    width: 500px; */
-  /* min-width: 100px ;
-    max-width: 500px; */
-  /* height: 500px; */
-  /* min-height: 800px;
-    max-height: 1600px; */
-}
+/* .item {
+  border: 10px solid black;
+  width: 500px;
+  min-width: 100px;
+  max-width: 500px;
+  height: 500px;
+  min-height: 800px;
+  max-height: 1600px;
+} */
 
-.nav {
-    display: flex;
-    padding: 20px 0;
+/* .nav {
+  display: flex;
+  padding: 20px 0;
 }
 
 .nav-wrapper {
-    display: flex;
-    margin-left: auto;
-}
+  display: flex;
+  margin-left: auto;
+} */
 
 /*
 a * n + b =
@@ -67,21 +67,20 @@ b - произвольное число
 n - итератор / счетчик (принимает заничения от 0 до infinity
 */
 
-.link:nth-child(n + 3) {
-    /* margin-left: 30px; */
-    background-color: tomato;
+/* .link:nth-child(n + 3) {
+  margin-left: 30px;
+  background-color: tomato;
 }
-
 
 .link:last-child {
   color: red;
 }
 
 .nav-item {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 .nav-item:last-child {
-    margin: 0;
+  margin: 0;
 }
 
 body {
@@ -98,4 +97,147 @@ img {
   outline: 1px solid;
   margin-top: 50px;
   width: 320px;
+} */
+
+:root {
+  --items: 1;
+
+  /* для gap */
+  --indent-vertical: 60px;
+  --indent-horizontal: 20px;
+
+  /* для маржинов */
+  --indent-top: 60px;
+  --indent-left: 20px;
+
+  --txt-color: tomato;
+}
+
+.page {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+
+}
+
+.header,
+.footer {
+  color: var(--txt-color);
+}
+
+
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  /* отступ при помощи gap */
+  row-gap: var(--indent-horizontal);
+  column-gap: var(--indent-vertical);
+
+  /* отступ при помощи margin-нов */
+  /* margin-top: calc(-1 * var(--indent-top));
+  margin-left: calc(-1 * var(--indent-left)); */
+}
+
+.grid-item {
+  /* отступы на margin-ах */
+  /* margin-top: var(--indent-top);
+  margin-left: var(--indent-left); */
+
+  /* формула для рассчета размера элемента с использованием margin */
+  /* flex-basis: calc(100% / var(--items) - var(--indent-left)); */
+
+  /* формула для рассчета размера элемента с использованием gap */
+  flex-basis: calc((100% - calc(var(--items) - 1) * var(--indent-vertical)) / var(--items));
+}
+
+.box-first {
+  margin-bottom: 50px;
+}
+
+.box-first > .item {
+  --items: 3;
+}
+
+.box-second {
+  /* переопределение отступов для margin */
+  /* --indent-top: 20px;
+  --indent-left: 20px; */
+
+  /* переопределение отступов для gap */
+  --indent-vertical: 30px;
+  --indent-horizontal: 30px;
+}
+
+.box-second > .item {
+  /* переопределение количества элементов */
+  --items: 6;
+
+  /* переопределение отступов для margin */
+  /* --indent-top: 20px;
+  --indent-left: 20px; */
+
+  /* переопределение отступов для gap */
+  --indent-vertical: 30px;
+  --indent-horizontal: 30px;
+}
+
+.box {
+}
+
+.item {
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+
+  height: 100px;
+  font-size: 40px;
+  /* color: azure; */
+  text-align: center;
+  line-height: 100px;
+  color: var(--txt-color);
+}
+
+/* .item:nth-child(3n) {
+  margin-right: 0;
+} */
+
+.first {
+  background-color: #ff5666;
+}
+
+.second {
+  background-color: #00fddc;
+}
+
+.third {
+  background-color: #bfbccb;
+}
+
+.fourth {
+  background-color: #bbe5ed;
+}
+
+/* .header {
+  width: 100%;
+  height: 100px;
+  background-color: #ff5666;
+}
+
+.footer {
+  width: 100%;
+  height: 200px;
+  background-color: rgb(115, 140, 223);
+} */
+
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+
+  --txt-color: rgb(130, 28, 134);
 }
