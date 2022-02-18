@@ -144,6 +144,7 @@ img {
 
 .subtitle {
   font-size: 18px;
+  font-weight: 400;
   line-height: 1.67;
   letter-spacing: 0.02em;
   font-weight: 400;
@@ -354,7 +355,7 @@ img {
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
-  outline: 1px solid tomato;
+
   color: var(--main-txt_mode-dark);
 }
 .services-item {
@@ -413,40 +414,31 @@ img {
 }
 
 .why-list {
-  width: 400px;
+  width: 370px;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   flex-wrap: wrap;
+  align-items: flex-start;
   margin-right: 130px;
 }
 
 .why-item {
-  /* width: 170px; */
-  height: 133px;
-  margin-right: 30px;
-  margin-bottom: 30px;
+  width: 170px;
+  min-height: 133px;
   padding: 20px 24px;
-
-  flex-basis: calc((100% - 30px) / 2);
 
   text-align: center;
   color: var(--secondary-txt_mode-light);
   background-color: var(--primary-bg_mode-light);
 }
 
-/* .why-item:not(:last-child) {
-  margin-bottom: 30px;
-} */
-
 .why-item:nth-child(2n) {
-  align-self: flex-end;
-  margin-right: 0;
-  margin-bottom: 0;
+  margin-top: 30px;
+  margin-left: 30px;
 }
 
 .why-wrapper {
   width: 500px;
-  /* flex-shrink: 0; */
 }
 
 .why-quantity {
