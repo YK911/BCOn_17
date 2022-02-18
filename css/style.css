@@ -396,7 +396,7 @@ img {
   margin-bottom: 30px;
   padding: 20px 24px;
 
-  flex-basis: calc((100%  - 30px ) / 2);
+  flex-basis: calc((100% - 30px) / 2);
 
   text-align: center;
   color: var(--secondary-txt_mode-light);
@@ -510,6 +510,12 @@ img {
 }
 
 .socials-link:hover {
+  /*
+  ==============
+  Взаимодействие свойства color на родителе
+  и currentColor на ребенке
+  ==============
+  */
   /* color: #ff6c00; */
   background-color: #555555;
 }
@@ -519,7 +525,7 @@ img {
 }
 
 .socials-link:hover .socials-icon {
-  fill: #ff6c00;
+  fill: var(--accent-cl);
 }
 
 /* Contacts section */
@@ -555,7 +561,7 @@ img {
   color: var(--main-txt_mode-dark);
 }
 
-/*  */
+/* Footer section */
 
 .footer {
   font-weight: 600;
