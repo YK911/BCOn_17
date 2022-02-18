@@ -315,7 +315,7 @@ img {
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
-outline: 1px solid  tomato;
+  outline: 1px solid tomato;
   color: var(--main-txt_mode-dark);
 }
 .services-item {
