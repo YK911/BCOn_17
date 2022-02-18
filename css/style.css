@@ -95,6 +95,7 @@ img {
   line-height: 1.36;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 .uppertitle::before {
@@ -133,17 +134,19 @@ img {
 .title-mode-dark {
   margin-bottom: 44px;
   color: var(--secondary-txt_mode-dark);
+  margin-bottom: 44px;
 }
 .title-mode-light {
   margin-bottom: 20px;
   color: var(--secondary-txt_mode-light);
+  margin-bottom: 20px;
 }
 
 .subtitle {
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
-
+  font-weight: 400;
   color: var(--main-txt-cl);
 }
 
@@ -302,8 +305,27 @@ img {
 .hero-btn.disable {
   color: var(--disable);
 }
-
+.about-list {
+  display: flex;
+}
+.about-item:not(:last-child) {
+  margin-right: 30px;
+}
+.about-container {
+  display: flex;
+}
+.about-wrapper {
+  width: 500px;
+  margin-left: auto;
+}
+.about-subtitle {
+  margin-bottom: 20px;
+}
+.about-text {
+  margin-bottom: 40px;
+}
 /* Services section */
+
 .services {
   background-color: var(--primary-bg_mode-dark);
 
@@ -319,6 +341,11 @@ img {
   justify-content: center;
   margin-bottom: 50px;
 }
+.services-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
 
 .services-list {
   padding: 30px 40px;
@@ -327,8 +354,12 @@ img {
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
-
+  outline: 1px solid tomato;
   color: var(--main-txt_mode-dark);
+}
+.services-item {
+  display: flex;
+  justify-content: space-between;
 }
 
 .services-list:nth-child(odd) {
