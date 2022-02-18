@@ -416,7 +416,6 @@ img {
 .why-list {
   width: 370px;
   display: flex;
-  /* flex-direction: column; */
   flex-wrap: wrap;
   align-items: flex-start;
   margin-right: 130px;
