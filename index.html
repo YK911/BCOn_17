@@ -28,8 +28,11 @@
     <!-- Header section -->
     <header class="header">
       <div class="container header-container">
-        <a class="header-link link" href="./index.html">
-          <img class="header-img" src="./images/icons/logo.svg" alt="Логотип" width="70" height="56" />
+        <a class="header-link link" href="./index.html" aria-label="Логотип">
+          <svg class="header-img" width="70" height="56">
+            <use href="./images/icons.svg#icon-logo"></use>
+          </svg>
+          <!-- <img class="header-img" src="./images/icons/logo.svg" alt="Логотип" width="70" height="56" /> -->
         </a>
         <nav class="nav">
           <ul class="nav-list list">
@@ -49,7 +52,7 @@
         </nav>
         <div class="header-wrapper">
           <a class="header-phone link" href="tel:+380441111111">+38 044 111 11 11</a>
-          <button class="btn btn-mode-dark" type="button">онлайн-запись</button>
+          <button class="btn btn-mode-dark" type="button" data-modal-open>онлайн-запись</button>
         </div>
       </div>
     </header>
@@ -58,48 +61,55 @@
     <main>
       <!-- Hero section -->
       <section class="hero">
-        <div class="container">
-          <ul class="hero-list list">
-            <li class="hero-item item">
-              <a class="hero-link link" href="" lang="en">Instagram</a>
-            </li>
-            <li class="hero-item item">
-              <a class="hero-link link" href="" lang="en">Youtube</a>
-            </li>
-          </ul>
-          <p class="hero-uppertitle uppertitle uppertitle-mode-dark" lang="en">A hair salon for men in Kyiv</p>
-          <h1 class="hero-title" lang="en">BarberShop</h1>
-          <h2 class="hero-subtitle subtitle subtitle-mode-dark">
-            Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со вкусом.
-          </h2>
-          <div>
-            <button class="hero-btn disable" type="button">Назад</button>
-            <button class="hero-btn" type="button">Вперед</button>
+        <div class="hero-container container">
+          <div class="hero-left-side">
+            <ul class="hero-list list">
+              <li class="hero-item item">
+                <a class="hero-link link" href="" lang="en">Instagram</a>
+              </li>
+              <li class="hero-item item">
+                <a class="hero-link link" href="" lang="en">Youtube</a>
+              </li>
+            </ul>
+          </div>
+          <div class="hero-right-side">
+            <p class="hero-uppertitle uppertitle uppertitle-mode-dark" lang="en">A hair salon for men in Kyiv</p>
+            <h1 class="hero-title" lang="en">BarberShop</h1>
+            <h2 class="hero-subtitle subtitle subtitle-mode-dark">
+              Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со вкусом.
+            </h2>
+            <div class="hero-slider-btn">
+              <button class="hero-btn disable" type="button">Назад</button>
+              <button class="hero-btn" type="button">Вперед</button>
+            </div>
           </div>
         </div>
       </section>
       <!-- About us section -->
       <section class="about section">
-        <div class="container">
-          <ul class="list">
-            <li>
+        <div class="about-container container">
+          <ul class="about-list list">
+            <li class="about-item">
               <img src="./images/about-us/img-1.jpg" alt="Стрижка бороды" width="270" height="445" />
             </li>
-            <li class="inner-item">
-              <p class="text">Lorem ipsum dolor sit amet consectetur.</p>
+            <li class="about-item">
+              <img src="./images/about-us/img-1.jpg" alt="Стрижка бороды" width="270" height="445" />
             </li>
           </ul>
-          <p class="uppertitle uppertitle-mode-light">О НАС</p>
-          <h2 class="title title-mode-light">Лучший Барбершоп твоего города</h2>
-          <h3 class="subtitle subtitle-mode-light">
-            Если ты хочешь добавить в свой образ больше уверенности – тебе точно к нам.
-          </h3>
-          <p>
-            Мы команда, которая никогда не останавливается на достигнутом и жаждет перемен. И когда ты попадешь в руки
-            нашего мастера, то уже никогда не сможешь быть прежним. Мы команда, которая всегда с клиентами "на одной
-            волне". Поэтому, мы всегда готовы усовершенствовать каждого, кто к нам приходит!
-          </p>
-          <button class="btn btn-mode-light" type="button">онлайн-запись</button>
+
+          <div class="about-wrapper">
+            <p class="uppertitle uppertitle-mode-light">О НАС</p>
+            <h2 class="title title-mode-light">Лучший Барбершоп твоего города</h2>
+            <h3 class="about-subtitle subtitle subtitle-mode-light">
+              Если ты хочешь добавить в свой образ больше уверенности – тебе точно к нам.
+            </h3>
+            <p class="about-text">
+              Мы команда, которая никогда не останавливается на достигнутом и жаждет перемен. И когда ты попадешь в руки
+              нашего мастера, то уже никогда не сможешь быть прежним. Мы команда, которая всегда с клиентами "на одной
+              волне". Поэтому, мы всегда готовы усовершенствовать каждого, кто к нам приходит!
+            </p>
+            <button class="btn btn-mode-light" type="button">онлайн-запись</button>
+          </div>
         </div>
       </section>
       <!-- Services section -->
@@ -322,18 +332,18 @@
         <div class="container">
           <p class="uppertitle uppertitle-mode-light">На латинском языке “барба” означает “борода”</p>
           <h2 hidden>Портфолио работ</h2>
-          <ul class="list">
-            <li>
+          <ul class="portfolio-list list">
+            <li class="portfolio-item">
               <img src="./images/portfolio/img-1.jpg" alt="Стрижка под машинку" width="270" height="360" />
             </li>
-            <li>
+            <li class="portfolio-item">
               <img src="./images/portfolio/img-2.jpg" alt="Бритье бороды" width="270" height="360" />
             </li>
-            <li>
+            <li class="portfolio-item">
               <img src="./images/portfolio/img-3.jpg" alt="Распаривание лица" width="270" height="360" />
             </li>
-            <li class="inner-item">
-              <p class="text">Lorem ipsum dolor sit amet consectetur.</p>
+            <li class="portfolio-item">
+              <img src="./images/portfolio/img-4.jpg" alt="Стрижка опасной бритвой" width="270" height="360" />
             </li>
           </ul>
         </div>
@@ -361,14 +371,28 @@
                     href="https://goo.gl/maps/AAhjQ7b2pQGy2dwU6"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >ул. Васильковая, 7А Киев, 08132</a
                   >
+                    <svg class="address-icon" width="24" height="24">
+                      <use href="./images/icons.svg#icon-map"></use>
+                    </svg>
+                    ул. Васильковая, 7А Киев, 08132
+                  </a>
                 </li>
                 <li class="address-item">
-                  <a class="address-link link" href="tel:+380441111111">+38 044 111 11 11</a>
+                  <a class="address-link link" href="tel:+380441111111">
+                    <svg class="address-icon" width="24" height="24">
+                      <use href="./images/icons.svg#icon-phone"></use>
+                    </svg>
+                    +38 044 111 11 11
+                  </a>
                 </li>
                 <li class="address-item">
-                  <a class="address-link link" href="mailto:barbershop@email.com">barbershop@email.com</a>
+                  <a class="address-link link" href="mailto:barbershop@email.com">
+                    <svg class="address-icon" width="24" height="24">
+                      <use href="./images/icons.svg#icon-mail"></use>
+                    </svg>
+                    barbershop@email.com
+                  </a>
                 </li>
               </ul>
             </address>
@@ -385,7 +409,7 @@
 
     <!-- Footer section -->
     <footer class="footer">
-      <div class="container">
+      <div class="container footer-container">
         <p class="footer-copyright">&#169; Copyright 2020</p>
         <ul class="footer-list list">
           <li class="footer-item">
@@ -397,5 +421,14 @@
         </ul>
       </div>
     </footer>
+
+    <!-- Modal window -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-btn" type="button" data-modal-close>X</button>
+      </div>
+    </div>
+
+    <script src="./modal.js"></script>
   </body>
 </html>
