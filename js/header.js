@@ -1,6 +1,7 @@
-const header = document.querySelector(".header");
-const scrolled = () => {
-  const threshold = window.document.scrollTop() > 130;
-  header.toggleClass("scrolled", threshold);
-};
-window.addEventListener("scroll", scrolled);
+$(document).on('scroll', function(){
+    if ( $(window).scrollTop() > 50) {
+        $('.header').addClass('scrolled');
+    } else {
+        $('.header').removeClass('scrolled');
+    }
+});
