@@ -37,6 +37,9 @@
         <nav class="nav">
           <ul class="nav-list list">
             <li class="nav-item">
+              <a class="nav-link link" href="./form.html">Формы</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link link" href="">О нас</a>
             </li>
             <li class="nav-item">
@@ -355,10 +358,31 @@
           <article class="contacts-left-side">
             <h3 class="title title-mode-dark">Онлайн-запись</h3>
             <form class="contacts-form">
-              <input type="text" placeholder="Имя*" />
-              <input type="email" placeholder="Телефон*" />
-              <textarea cols="30" rows="10" placeholder="сообщение"></textarea>
-              <button type="submit">отправить</button>
+              <div class="label-wrapper" role="group">
+                <label class="form-label">
+                  <input class="form-input" type="text" placeholder=" " pattern="^[a-zA-Z]+\s[a-zA-Z]+$" required />
+                  <span class="form-text">Имя*</span>
+                  <span class="form-text-alert">Введите имя и фамилию</span>
+                </label>
+                <label class="form-label">
+                  <input
+                    class="form-input"
+                    type="phone"
+                    placeholder=" "
+                    minlength="10"
+                    maxlength="10"
+                    required
+                  />
+                  <span class="form-text">Телефон*</span>
+                  <span class="form-text-alert">Формат номера 099 999 99 99</span>
+                </label>
+              </div>
+              <label class="form-message-label">
+                <span class="form-message-text">сообщение</span>
+                <textarea class="form-message-input" rows="3" placeholder="Введите текст..."></textarea>
+              </label>
+
+              <button class="btn btn-mode-dark" type="submit">отправить</button>
             </form>
           </article>
           <article class="contacts-right-side">

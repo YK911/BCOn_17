@@ -116,6 +116,9 @@
         </clipPath>
       </defs>
     </symbol>
+    <symbol id="icon-checked" viewBox="0 0 26 22">
+      <path d="M2 13l7.192 7.192a1 1 0 001.502-.1L24.5 2" stroke-width="3" stroke-linecap="round" />
+    </symbol>
 
   </defs>
 </svg>
