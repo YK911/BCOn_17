@@ -210,7 +210,10 @@ img {
 
   color: var(--secondary-txt_mode-dark);
   z-index: 10;
-  /* background-color: #191c26; */
+}
+
+.header.scrolled {
+  background-color: var(--primary-bg_mode-dark);
 }
 
 .header-container {
@@ -257,9 +260,6 @@ img {
 }
 
 /* Hero section */
-.hero {
-}
-
 .hero-container {
   display: flex;
 }
@@ -288,9 +288,6 @@ img {
   height: 1px;
 
   background-color: var(--secondary-txt_mode-light);
-}
-
-.hero-item {
 }
 
 .hero-item:not(:last-child) {
