@@ -657,6 +657,131 @@ img {
   color: var(--secondary-txt_mode-dark);
 }
 
+.label-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 44px;
+}
+
+.form-label {
+  position: relative;
+  margin-right: 30px;
+  color: rgba(157, 164, 189, 0.4);
+}
+
+.form-label:last-child {
+  margin-right: 0;
+}
+
+.form-label:hover,
+.form-label:focus {
+  color: #ffffff;
+}
+
+.form-text {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+
+  font-size: 11px;
+  line-height: 1.36;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  transition: transform 300ms ease-in-out;
+}
+
+.form-input:focus + .form-text,
+.form-input:not(:placeholder-shown) + .form-text {
+  transform: translateY(-20px);
+  color: #ffffff;
+}
+
+.form-input:not(:placeholder-shown):required:invalid + .form-text {
+  color: red;
+}
+
+.form-text-alert {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  color: red;
+  transform: translateY(30px);
+  opacity: 0;
+
+  transition: opacity 300ms ease-in-out;
+}
+
+.form-input:not(:placeholder-shown):required:invalid ~ .form-text-alert {
+  opacity: 1;
+}
+
+.form-input {
+  display: inline-block;
+  width: 260px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  outline: none;
+}
+
+.form-input:focus,
+.form-input:not(:placeholder-shown) {
+  border-color: #ffffff;
+}
+
+.form-input:not(:placeholder-shown):required:invalid {
+  border-color: red;
+}
+
+.form-label:hover .form-input,
+.form-label:focus .form-input {
+  border-color: #ffffff;
+}
+
+.form-message-label {
+  display: block;
+  margin-bottom: 44px;
+}
+
+.form-message-text {
+  display: block;
+  margin-bottom: 10px;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: rgba(157, 164, 189, 0.4);
+}
+
+.form-message-input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  outline: transparent;
+  resize: none;
+}
+
+/* .form-message-input::placeholder {
+  color: rgba(157, 164, 189, 0.4);
+} */
+
 .address-list {
   width: 270px;
   margin-bottom: 70px;

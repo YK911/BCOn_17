@@ -1,0 +1,121 @@
+:root {
+  /* fonts */
+  --main-font: "Open Sans", sans-serif;
+  --secondary-font: "Raleway", sans-serif;
+
+  /* text colors */
+  --accent-cl: #ff6c00;
+
+  /* mode light */
+  --primary-txt_mode-light: #555555;
+  --secondary-txt_mode-light: #303030;
+  /* mode dark */
+  --main-txt_mode-dark: #9da4bd;
+  --primary-txt_mode-dark: rgba(157, 164, 189, 0.6);
+  --secondary-txt_mode-dark: #ffffff;
+
+  --disable: rgba(157, 164, 189, 0.6);
+
+  /* bg colors */
+  --primary-bg_mode-light: #f7f7f7;
+  --primary-bg_mode-dark: #191c26;
+
+  /* --indent: 30px; */
+
+  /* others */
+  --transition-fast: 300ms ease-in-out;
+  --transition-slow: 600ms ease-in-out;
+}
+
+body {
+  font-family: var(--main-font);
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+
+  color: var(--primary-txt_mode-light);
+}
+
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}
+
+.form {
+  width: 550px;
+  padding: 20px;
+  margin: 0 auto;
+
+  background-color: #191919;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 40px;
+
+  font-size: 20px;
+  line-height: 1.6;
+
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.form-input {
+  color: #ffffff;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+}
+
+.textarea {
+  resize: none;
+  background-color: transparent;
+}
+
+.form-agreement {
+  display: flex;
+  align-items: center;
+  margin-bottom: 90px;
+}
+
+.form-agreement-custom-checkbox {
+  display: block;
+  width: 30px;
+  height: 28px;
+  margin-right: 30px;
+
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+
+.form-agreement-icon {
+  fill: none;
+
+  stroke: transparent;
+  transform: translate(4px, -6px);
+
+  transition: stroke 300ms linear;
+}
+
+.form-agreement-checkbox:checked + .form-agreement-custom-checkbox .form-agreement-icon {
+  stroke: #df3d3a;
+}
+
+.form-agreement-link {
+  margin-left: 3px;
+}
+
+/* inputs
+font-size: 20px;
+line-height: 1.6%;
+
+
+color: rgba(255, 255, 255, 0.3); */
+
+/* textarea
+color: rgba(255, 255, 255, 0.8); */
+
+/* agreement
+font-size: 16px;
+line-height: 1.6;
+color: rgba(255, 255, 255, 0.8); */
