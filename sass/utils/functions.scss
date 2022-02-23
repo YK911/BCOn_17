@@ -1,0 +1,6 @@
+@function getTextColor($key) {
+  @return map-get($text-colors, $key);
+}
+@function getBgColor($key) {
+  @return map-get($bg-colors, $key);
+}

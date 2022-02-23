@@ -1,0 +1,42 @@
+:root {
+  /* fonts */
+  --main-font: "Open Sans", sans-serif;
+  --secondary-font: "Raleway", sans-serif;
+
+  /* text colors */
+  --accent-cl: #ff6c00;
+
+  /* mode light */
+  --primary-txt_mode-light: #555555;
+  --secondary-txt_mode-light: #303030;
+  /* mode dark */
+  --main-txt_mode-dark: #9da4bd;
+  --primary-txt_mode-dark: rgba(157, 164, 189, 0.6);
+  --secondary-txt_mode-dark: #ffffff;
+
+  --disable: rgba(157, 164, 189, 0.6);
+
+  /* bg colors */
+  --primary-bg_mode-light: #f7f7f7;
+  --primary-bg_mode-dark: #191c26;
+  --header-bg: rgb(25, 28, 38, 0.7);
+
+  /* --indent: 30px; */
+
+  /* others */
+  --transition-fast: 300ms ease-in-out;
+  --transition-slow: 600ms ease-in-out;
+}
+
+// Карты (словари)
+$text-colors: (
+  "accent": #ff6c00,
+  "primary-light": #555555,
+  "secondary-light": #303030,
+);
+
+$bg-colors: (
+  "accent": #ff6c00,
+  "primary-light": #555555,
+  "secondary-light": #303030,
+);

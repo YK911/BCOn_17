@@ -1,0 +1,40 @@
+/* Footer section */
+.footer {
+  padding: 56px 0;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+}
+
+.footer-copyright {
+  color: var(--main-txt_mode-dark);
+}
+
+.footer-list {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.footer-list:before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  margin-right: 40px;
+
+  background-color: var(--secondary-txt_mode-light);
+}
+
+.footer-item {
+  margin-right: 40px;
+}
+
+.footer-link {
+  color: var(--secondary-txt_mode-light);
+}

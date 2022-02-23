@@ -1,0 +1,20 @@
+%btn {
+    min-width: 160px;
+    max-width: 350px;
+    padding: 12px 20px;
+
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    background-color: transparent;
+
+    border: 1px solid var(--accent-cl);
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    transition: color var(--transition-fast), background-color var(--transition-fast);
+}

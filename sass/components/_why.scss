@@ -1,0 +1,59 @@
+/* Why us section */
+.why-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .why-list {
+    width: 370px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-right: 130px;
+  }
+
+  .why-item {
+    width: 170px;
+    min-height: 133px;
+    padding: 20px 24px;
+
+    text-align: center;
+    color: var(--secondary-txt_mode-light);
+    background-color: var(--primary-bg_mode-light);
+  }
+
+  .why-item:nth-child(2n) {
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+
+  .why-wrapper {
+    width: 500px;
+  }
+
+  .why-quantity {
+    display: flex;
+    justify-content: center;
+
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.36;
+    letter-spacing: 0.05em;
+  }
+
+  .why-quantity::after {
+    margin-top: 8px;
+    margin-left: 2px;
+
+    content: "\002B";
+    color: #ff6c00;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.375;
+  }
+
+  .why-description {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+  }

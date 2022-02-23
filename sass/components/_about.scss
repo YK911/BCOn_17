@@ -1,0 +1,20 @@
+/* About section */
+.about-list {
+    display: flex;
+  }
+  .about-item:not(:last-child) {
+    margin-right: 30px;
+  }
+  .about-container {
+    display: flex;
+  }
+  .about-wrapper {
+    width: 500px;
+    margin-left: auto;
+  }
+  .about-subtitle {
+    margin-bottom: 20px;
+  }
+  .about-text {
+    margin-bottom: 40px;
+  }
