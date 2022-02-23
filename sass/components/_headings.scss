@@ -8,9 +8,9 @@
   // font-size: 11px;
   // line-height: 1.36;
   // letter-spacing: 0.1em;
-  // text-transform: uppercase;
 
-  @include fonts(uppercase, 600, 24px, 48px);
+  @include fonts(11px, 1.36, 0.1em, 600);
+  text-transform: uppercase;
 }
 
 .uppertitle::before {
@@ -43,7 +43,7 @@
   // line-height: 49px;
   // letter-spacing: 0.05em;
 
-  @include fonts(42px, 49px, 0.05em);
+  @include fonts(42px, 1.16, 0.05em);
 
   color: var(--secondary-txt-cl);
 }
@@ -66,7 +66,7 @@
   // line-height: 1.67;
   // letter-spacing: 0.02em;
 
-  @include fonts(18px, 400, 1.67, 0.02em);
+  @include fonts(18px,1.67, 0.02em);
 
   color: var(--main-txt-cl);
 }

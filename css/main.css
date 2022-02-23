@@ -104,10 +104,11 @@ img {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-  font-weight: 48px;
-  font-size: uppercase;
-  line-height: 600;
-  letter-spacing: 24px;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .uppertitle::before {
@@ -138,7 +139,7 @@ img {
   font-family: var(--secondary-font);
   font-weight: 400;
   font-size: 42px;
-  line-height: 49px;
+  line-height: 1.16;
   letter-spacing: 0.05em;
   color: var(--secondary-txt-cl);
 }
@@ -156,10 +157,10 @@ img {
 }
 
 .subtitle {
-  font-weight: 0.02em;
+  font-weight: 400;
   font-size: 18px;
-  line-height: 400;
-  letter-spacing: 1.67;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
   color: var(--main-txt-cl);
 }
 
@@ -297,8 +298,8 @@ img {
   transition: color var(--transition-slow);
 }
 
-.nav-link:hover,
-.nav-link:focus,
+.nav__link:hover,
+.nav__link:focus,
 .header-phone:hover,
 .header-phone:focus {
   color: var(--accent-cl);
