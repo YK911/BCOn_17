@@ -1,0 +1,40 @@
+// три уровня вложенности
+.btn {
+  @extend %btn;
+
+  &--mode-dark {
+    color: var(--secondary-txt_mode-dark);
+
+    &:hover,
+    &:focus {
+      color: var(--secondary-txt_mode-dark);
+      background-color: var(--accent-cl);
+    }
+  }
+}
+
+// два уровня вложенности
+.btn--mode-light {
+  color: var(--secondary-txt_mode-light);
+
+  &:hover,
+  &:focus {
+    color: var(--secondary-txt_mode-dark);
+    background-color: var(--accent-cl);
+  }
+}
+
+.slider-btn {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+
+  color: var(--secondary-txt_mode-dark);
+  background-color: transparent;
+  cursor: pointer;
+
+  &--disable {
+    color: var(--disable);
+  }
+}

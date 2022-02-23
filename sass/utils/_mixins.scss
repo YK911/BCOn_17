@@ -1,0 +1,29 @@
+@mixin bordered($color) {
+  border-top: 1px solid $color;
+  border-bottom: 1px solid $color;
+}
+
+@mixin fonts($font-size: 14px, $line-height: 1.67, $letter-spacing: 0.03em, $font-weight: 400) {
+  font-weight: $font-weight;
+  font-size: $font-size;
+  //   line-height: lh($line-height, $font-size);
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+}
+
+// @function lh($line-height, $font-size) {
+//   $lh: #{$line-height} / #{$font-size};
+
+//   @return $lh;
+// }
+
+// @mixin fonts($font-weight: 400, $font-size: 14px, $line-height: 1.2, $letter-spacing: 0.03em ) {
+//   font-weight: $font-weight;
+//   font-size: $font-size;
+//   line-height: $line-height;
+//   letter-spacing: $letter-spacing;
+// }
+
+// @mixin lh($line-height, $font-size) {
+//   line-height: calc(#{$line-height} / #{$font-size});
+// }

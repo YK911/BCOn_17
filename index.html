@@ -22,36 +22,37 @@
     <!-- Normalize styles -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css" />
     <!-- Main styles -->
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <!-- <link rel="stylesheet" href="./css/style.css" /> -->
   </head>
   <body>
     <!-- Header section -->
     <header class="header">
-      <div class="container header-container">
-        <a class="header-link link" href="./index.html" aria-label="Логотип">
-          <svg class="header-logo" width="70" height="56">
+      <div class="container header__container">
+        <a class="header__link link" href="./index.html" aria-label="Логотип">
+          <svg class="header__logo" width="70" height="56">
             <use href="./images/icons.svg#icon-logo"></use>
           </svg>
         </a>
         <nav class="nav">
-          <ul class="nav-list list">
-            <li class="nav-item">
-              <a class="nav-link link" href="">О нас</a>
+          <ul class="nav__list list">
+            <li class="nav__item">
+              <a class="nav__link link" href="">О нас</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link link" href="">Услуги и цены</a>
+            <li class="nav__item">
+              <a class="nav__link link" href="">Услуги и цены</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link link" href="">Мастера</a>
+            <li class="nav__item">
+              <a class="nav__link link" href="">Мастера</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link link" href="">Контакты</a>
+            <li class="nav__item">
+              <a class="nav__link link" href="">Контакты</a>
             </li>
           </ul>
         </nav>
         <div class="header-wrapper">
           <a class="header-phone link" href="tel:+380441111111">+38 044 111 11 11</a>
-          <button class="btn btn-mode-dark" type="button" data-modal-open>онлайн-запись</button>
+          <button class="btn btn--mode-dark" type="button" data-modal-open>онлайн-запись</button>
         </div>
       </div>
     </header>
@@ -60,26 +61,26 @@
     <main>
       <!-- Hero section -->
       <section class="hero">
-        <div class="hero-container container">
-          <div class="hero-left-side">
-            <ul class="hero-list list">
-              <li class="hero-item item">
-                <a class="hero-link link" href="" lang="en">Instagram</a>
+        <div class="hero__container container">
+          <div class="hero__left-side">
+            <ul class="hero__list hero__list--rotate list">
+              <li class="hero__item item">
+                <a class="hero__link link" href="" lang="en">Instagram</a>
               </li>
-              <li class="hero-item item">
-                <a class="hero-link link" href="" lang="en">Youtube</a>
+              <li class="hero__item item">
+                <a class="hero__link link" href="" lang="en">Youtube</a>
               </li>
             </ul>
           </div>
-          <div class="hero-right-side">
-            <p class="hero-uppertitle uppertitle uppertitle-mode-dark" lang="en">A hair salon for men in Kyiv</p>
-            <h1 class="hero-title" lang="en">BarberShop</h1>
-            <h2 class="hero-subtitle subtitle subtitle-mode-dark">
+          <div class="hero__right-side">
+            <p class="hero__uppertitle uppertitle uppertitle--mode-dark" lang="en">A hair salon for men in Kyiv</p>
+            <h1 class="hero__title" lang="en">BarberShop</h1>
+            <h2 class="hero__subtitle subtitle subtitle--mode-dark">
               Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со вкусом.
             </h2>
-            <div class="hero-slider-btn">
-              <button class="hero-btn disable" type="button">Назад</button>
-              <button class="hero-btn" type="button">Вперед</button>
+            <div class="hero__slider-btns">
+              <button class="slider-btn hero__slider-btn slider-btn--disable" type="button">Назад</button>
+              <button class="slider-btn hero__slider-btn" type="button">Вперед</button>
             </div>
           </div>
         </div>
@@ -97,9 +98,9 @@
           </ul>
 
           <div class="about-wrapper">
-            <p class="uppertitle uppertitle-mode-light">О НАС</p>
-            <h2 class="title title-mode-light">Лучший Барбершоп твоего города</h2>
-            <h3 class="about-subtitle subtitle subtitle-mode-light">
+            <p class="uppertitle uppertitle--mode-light">О НАС</p>
+            <h2 class="title title--mode-light">Лучший Барбершоп твоего города</h2>
+            <h3 class="about-subtitle subtitle subtitle--mode-light">
               Если ты хочешь добавить в свой образ больше уверенности – тебе точно к нам.
             </h3>
             <p class="about-text">
@@ -107,15 +108,15 @@
               нашего мастера, то уже никогда не сможешь быть прежним. Мы команда, которая всегда с клиентами "на одной
               волне". Поэтому, мы всегда готовы усовершенствовать каждого, кто к нам приходит!
             </p>
-            <button class="btn btn-mode-light" type="button">онлайн-запись</button>
+            <button class="btn btn--mode-light" type="button">онлайн-запись</button>
           </div>
         </div>
       </section>
       <!-- Services section -->
       <section class="services section">
         <div class="container">
-          <p class="uppertitle uppertitle-mode-dark">Проведи время в компании лучших мастеров</p>
-          <h2 class="title title-mode-dark">Услуги и цены</h2>
+          <p class="uppertitle uppertitle--mode-dark">Проведи время в компании лучших мастеров</p>
+          <h2 class="title title--mode-dark">Услуги и цены</h2>
           <div class="services-wrapper">
             <ul class="services-list list">
               <li class="services-item">
@@ -154,7 +155,7 @@
               </li>
             </ul>
           </div>
-          <button class="btn btn-mode-dark" type="button">онлайн-запись</button>
+          <button class="btn btn--mode-dark" type="button">онлайн-запись</button>
         </div>
       </section>
       <!-- Why us section -->
@@ -180,9 +181,9 @@
           </ul>
 
           <div class="why-wrapper">
-            <p class="uppertitle uppertitle-mode-light">старая традиционная школа</p>
-            <h2 class="title title-mode-light">Почему приходят именно к нам?</h2>
-            <h3 class="subtitle subtitle-mode-light">
+            <p class="uppertitle uppertitle--mode-light">старая традиционная школа</p>
+            <h2 class="title title--mode-light">Почему приходят именно к нам?</h2>
+            <h3 class="subtitle subtitle--mode-light">
               О нас говорят только хорошее. Но лучше 1 раз увидеть и прочувствовать, чем 10 раз прочитать.
             </h3>
           </div>
@@ -191,8 +192,8 @@
       <!-- Team section -->
       <section class="team section">
         <div class="container">
-          <p class="uppertitle uppertitle-mode-light">для настоящих ценителей атмосферы</p>
-          <h2 class="title title-mode-light">Наши мастера</h2>
+          <p class="uppertitle uppertitle--mode-light">для настоящих ценителей атмосферы</p>
+          <h2 class="title title--mode-light">Наши мастера</h2>
           <ul class="team-list list">
             <li class="team-item">
               <img class="team-avatar" src="./images/team/member-1.jpg" alt="Главный барбер" width="370" height="346" />
@@ -329,7 +330,7 @@
       <!-- Portfolio section -->
       <section class="portfolio section">
         <div class="container">
-          <p class="uppertitle uppertitle-mode-light">На латинском языке “барба” означает “борода”</p>
+          <p class="uppertitle uppertitle--mode-light">На латинском языке “барба” означает “борода”</p>
           <h2 hidden>Портфолио работ</h2>
           <ul class="portfolio-list list">
             <li class="portfolio-item">
@@ -352,7 +353,7 @@
         <div class="container contacts-container">
           <h2 class="visually-hidden">Онлайн-запись</h2>
           <article class="contacts-left-side">
-            <h3 class="title title-mode-dark">Онлайн-запись</h3>
+            <h3 class="title title--mode-dark">Онлайн-запись</h3>
             <form class="contacts-form">
               <div class="label-wrapper" role="group">
                 <label class="form-label">
@@ -371,11 +372,11 @@
                 <textarea class="form-message-input" rows="3" placeholder="Введите текст..."></textarea>
               </label>
 
-              <button class="btn btn-mode-dark" type="submit">отправить</button>
+              <button class="btn btn--mode-dark" type="submit">отправить</button>
             </form>
           </article>
           <article class="contacts-right-side">
-            <h3 class="title title-mode-dark">Контакты</h3>
+            <h3 class="title title--mode-dark">Контакты</h3>
             <address class="address">
               <ul class="address-list list">
                 <li class="address-item">
@@ -410,7 +411,7 @@
               </ul>
             </address>
             <div>
-              <p class="uppertitle uppertitle-mode-dark">время работы</p>
+              <p class="uppertitle uppertitle--mode-dark">время работы</p>
               <p class="address-time">
                 Ежедневно с <time datetime="09:00">9:00</time> до <time datetime="22:00">22:00</time>
               </p>

@@ -1,0 +1,85 @@
+/* Team section */
+.team {
+    background-color: var(--primary-bg_mode-light);
+  }
+
+  .team-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -30px;
+    margin-left: -30px;
+  }
+
+  .team-item {
+    flex-basis: calc(100% / 3 - 30px);
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+
+  .team-wrapper {
+    padding: 30px;
+    text-align: center;
+  }
+
+  .team-name {
+    margin-bottom: 8px;
+    font-size: 18px;
+    line-height: 1.39;
+    letter-spacing: 0.02em;
+
+    color: var(--secondary-txt_mode-light);
+  }
+
+  .team-position {
+    margin-bottom: 30px;
+
+    font-size: 14px;
+    line-height: 1.36;
+    letter-spacing: 0.02em;
+
+    color: var(--accent-cl);
+  }
+
+  .socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .socials-item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  .socials-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+
+    color: #303030;
+
+    background-color: #fff;
+
+    transition: color var(--transition-fast), background-color var(--transition-fast);
+  }
+
+  .socials-link:hover {
+    /*
+    ==============
+    Взаимодействие свойства color на родителе
+    и currentColor на ребенке
+    ==============
+    */
+    /* color: #ff6c00; */
+    background-color: #555555;
+  }
+
+  .socials-icon {
+    fill: currentColor;
+  }
+
+  .socials-link:hover .socials-icon {
+    fill: var(--accent-cl);
+  }
