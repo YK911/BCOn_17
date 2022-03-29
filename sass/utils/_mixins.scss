@@ -3,31 +3,61 @@
   border-bottom: 1px solid $color;
 }
 
-@mixin fonts($font-size: 14px, $line-height: 1.67, $letter-spacing: 0.03em, $font-weight: 400) {
-  font-weight: $font-weight;
+// Set vocabulary for variables
+$font-vars: (
+  "f-s": 14px,
+  "l-h": 24px,
+  "f-w": false,
+  "l-s": 0.03em,
+);
+
+// Get values from vocabulary
+@function getValue($key) {
+  @return map-get($font-vars, $key);
+}
+
+// Calculating line-height value to multiplier
+@function setLineHeight($lh, $fs) {
+  @return $lh / $fs;
+}
+
+// Delete unit from incoming value
+@function strip-unit($number) {
+  @if type-of($number) == "number" and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+@mixin fonts(
+  $fs: getValue("f-s"),
+  $lh: getValue("l-h"),
+  $fw: getValue("f-w"),
+  $ls: getValue("l-s")
+) {
+  $px: px;
+  $em: em;
+
+  $fs-nounits: strip-unit($fs);
+  $font-size: $fs-nounits + $px;
+
+  $line-height: setLineHeight(strip-unit($lh), strip-unit($fs));
+
+  $font-weight: strip-unit($fw);
+
+  $letter-spacing: strip-unit($ls) + $em;
 
   @if $font-size {
     font-size: $font-size;
   }
-
-  //   line-height: lh($line-height, $font-size);
-  line-height: $line-height;
-  letter-spacing: $letter-spacing;
+  @if $line-height {
+    line-height: $line-height;
+  }
+  @if $font-weight {
+    font-weight: $font-weight;
+  }
+  @if $letter-spacing {
+    letter-spacing: $letter-spacing;
+  }
 }
-
-// @function lh($line-height, $font-size) {
-//   $lh: #{$line-height} / #{$font-size};
-
-//   @return $lh;
-// }
-
-// @mixin fonts($font-weight: 400, $font-size: 14px, $line-height: 1.2, $letter-spacing: 0.03em ) {
-//   font-weight: $font-weight;
-//   font-size: $font-size;
-//   line-height: $line-height;
-//   letter-spacing: $letter-spacing;
-// }
-
-// @mixin lh($line-height, $font-size) {
-//   line-height: calc(#{$line-height} / #{$font-size});
-// }

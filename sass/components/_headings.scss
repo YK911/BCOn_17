@@ -9,7 +9,7 @@
   // line-height: 1.36;
   // letter-spacing: 0.1em;
 
-  @include fonts(11px, 1.36, 0.1em, 600);
+  @include fonts(11px, 15px, 600, 0.1em);
   text-transform: uppercase;
 }
 
@@ -43,7 +43,7 @@
   // line-height: 49px;
   // letter-spacing: 0.05em;
 
-  @include fonts(42px, 1.16, 0.05em);
+  @include fonts(42px, 48px, 400, 0.05em);
 
   color: var(--secondary-txt-cl);
 }
@@ -66,7 +66,7 @@
   // line-height: 1.67;
   // letter-spacing: 0.02em;
 
-  @include fonts(18px,1.67, 0.02em);
+  @include fonts(18px, 30, 400, 0.02em);
 
   color: var(--main-txt-cl);
 }

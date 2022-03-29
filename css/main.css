@@ -104,9 +104,9 @@ img {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-  font-weight: 600;
   font-size: 11px;
-  line-height: 1.36;
+  line-height: 1.36364;
+  font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -137,9 +137,9 @@ img {
 
 .title {
   font-family: var(--secondary-font);
-  font-weight: 400;
   font-size: 42px;
-  line-height: 1.16;
+  line-height: 1.14286;
+  font-weight: 400;
   letter-spacing: 0.05em;
   color: var(--secondary-txt-cl);
 }
@@ -157,9 +157,9 @@ img {
 }
 
 .subtitle {
-  font-weight: 400;
   font-size: 18px;
-  line-height: 1.67;
+  line-height: 1.66667;
+  font-weight: 400;
   letter-spacing: 0.02em;
   color: var(--main-txt-cl);
 }
