@@ -252,7 +252,7 @@ img {
   align-items: center;
   margin-bottom: 20px;
   font-size: 11px;
-  line-height: 1.36364;
+  line-height: 1.36;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -285,7 +285,7 @@ img {
 .title {
   font-family: var(--secondary-font);
   font-size: 42px;
-  line-height: 1.14286;
+  line-height: 1.14;
   font-weight: 400;
   letter-spacing: 0.05em;
   color: var(--secondary-txt-cl);
@@ -305,7 +305,7 @@ img {
 
 .subtitle {
   font-size: 18px;
-  line-height: 1.66667;
+  line-height: 1.67;
   font-weight: 400;
   letter-spacing: 0.02em;
   color: var(--main-txt-cl);
@@ -596,7 +596,7 @@ img {
   background-color: var(--secondary-txt_mode-dark);
   z-index: 100;
   font-size: 18px;
-  line-height: 1.38889;
+  line-height: 1.39;
   font-weight: 600;
   letter-spacing: 0.1em;
   color: var(--secondary-txt_mode-light);

@@ -1,4 +1,4 @@
-// @use "sass:math";
+@import "decimals";
 
 @mixin bordered($color) {
   border-top: 1px solid $color;
@@ -20,7 +20,9 @@ $font-vars: (
 
 // Calculating line-height value to multiplier
 @function setLineHeight($lh, $fs) {
-  @return $lh / $fs
+  $lh-value: $lh / $fs;
+
+  @return decimal-round($lh-value, 2)
 }
 // @return math.round(#{$lh / $fs} * 100) / 100;
 
