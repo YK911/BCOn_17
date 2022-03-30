@@ -30,17 +30,17 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
 // Types (Remove or comment out what you don’t need)
 // ==================================================
 $hamburger-types: (
-  elastic,
+  spring,
 ) !default;
 
 // Base Hamburger (We need this)
 // ==================================================
-@import "./base-styles";
+@import "base";
 
 // Hamburger types
 // ==================================================
-@import "types/elastic";
 
+@import "types/spring";
 
 // ==================================================
 // Cooking up additional types:

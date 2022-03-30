@@ -1,80 +1,121 @@
 /* Services section */
 .services {
-    background-color: var(--primary-bg_mode-dark);
+  background-color: var(--primary-bg_mode-dark);
 
-    background-image: url(../images/services/services-bg.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  background-image: url(../images/services/services-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.services-wrapper {
+  margin-bottom: 50px;
+
+  @include mq(mobile-only) {
+    padding: 30px;
   }
 
-  .services-wrapper {
+  @include mq(tablet-only) {
+    padding: 30px 40px;
+  }
+
+  @include mq(notDesktop) {
+    background-image: linear-gradient(
+      180deg,
+      rgb(23, 26, 36) 0%,
+      rgba(23, 26, 36, 0.2) 100%
+    );
+  }
+
+  @include mq(desktop) {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 50px;
   }
-  .services-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+}
+
+.services-list {
+  flex-basis: 50%;
+
+  color: var(--main-txt_mode-dark);
+
+  @media screen and (max-width: 480px) {
+    font-size: 3vw;
+    font-size: 1em;
   }
 
-  .services-list {
-    padding: 30px 40px;
-    flex-basis: 50%;
-
+  @include mq(tablet) {
     font-size: 18px;
     line-height: 1.67;
     letter-spacing: 0.02em;
-
-    color: var(--main-txt_mode-dark);
-  }
-  .services-item {
-    display: flex;
-    justify-content: space-between;
   }
 
-  .services-list:nth-child(odd) {
-    background-image: linear-gradient(180deg, rgb(24, 27, 37), rgba(23, 26, 36, 0.2));
-  }
-  .services-list:nth-child(even) {
-    background-image: linear-gradient(180deg, rgb(9, 11, 19), rgba(9, 11, 19, 0.2));
-  }
-
-  .services-item {
-    display: flex;
-    align-items: baseline;
-  }
-
-  .services-item:not(:last-child) {
+  @include mq(notDesktop) {
     margin-bottom: 20px;
   }
 
-  .services-item::before {
-    margin-left: 6px;
-    margin-right: 6px;
-    flex-grow: 1;
-    order: 1;
-    width: 100%;
-    height: 1px;
-    display: block;
-    content: "";
-
-    background-color: rgba(157, 164, 189, 0.12);
+  @include mq(desktop) {
+    padding: 30px 40px;
   }
+}
 
-  .services-text {
-    display: flex;
-    align-items: baseline;
-    flex-shrink: 0;
-  }
+.services-item {
+  display: flex;
+  justify-content: space-between;
+}
 
-  .services-text:last-child {
-    order: 2;
+.services-list:nth-child(odd) {
+  @include mq(desktop) {
+    background-image: linear-gradient(
+      180deg,
+      rgb(24, 27, 37),
+      rgba(23, 26, 36, 0.2)
+    );
   }
+}
+.services-list:nth-child(even) {
+  @include mq(desktop) {
+    background-image: linear-gradient(
+      180deg,
+      rgb(9, 11, 19),
+      rgba(9, 11, 19, 0.2)
+    );
+  }
+}
 
-  .services .btn {
-    display: block;
-    margin: 0 auto;
-  }
+.services-item {
+  display: flex;
+  align-items: baseline;
+}
+
+.services-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.services-item::before {
+  margin-left: 6px;
+  margin-right: 6px;
+  flex-grow: 1;
+  order: 1;
+  width: 100%;
+  height: 1px;
+  display: block;
+  content: "";
+
+  background-color: rgba(157, 164, 189, 0.12);
+}
+
+.services-text {
+  display: flex;
+  align-items: baseline;
+  flex-shrink: 0;
+}
+
+.services-text:last-child {
+  order: 2;
+}
+
+.services .btn {
+  display: block;
+  margin: 0 auto;
+}

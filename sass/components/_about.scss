@@ -1,9 +1,31 @@
 /* About section */
 .about-list {
   display: flex;
+
+  @include mq(mobile-only) {
+    display: none;
+  }
+
+  @include mq(tablet-only) {
+    flex-direction: column;
+  }
 }
+
+.about-item {
+  @include mq(tablet-only) {
+    width: 330px;
+    height: 235px;
+  }
+}
+
 .about-item:not(:last-child) {
-  margin-right: 30px;
+  @include mq(tablet-only) {
+    margin-bottom: 30px;
+  }
+
+  @include mq(desktop) {
+    margin-right: 30px;
+  }
 }
 .about-container {
   display: flex;
@@ -11,10 +33,22 @@
 .about-wrapper {
   width: 500px;
   margin-left: auto;
+
+  .title {
+    @include mq(notDesktop) {
+      font-size: 28px;
+    }
+  }
+
+  .subtitle {
+    margin-bottom: 20px;
+
+    @include mq(notDesktop) {
+      font-size: 16px;
+    }
+  }
 }
-.about-subtitle {
-  margin-bottom: 20px;
-}
+
 .about-text {
   margin-bottom: 40px;
 }

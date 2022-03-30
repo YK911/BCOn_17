@@ -42,6 +42,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
     />
+    <!-- Math module for SASS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sass-math@1.0.0/_math.scss">
     <!-- Main styles -->
     <link rel="stylesheet" href="./css/main.min.css" />
     <!-- <link rel="stylesheet" href="./css/style.css" /> -->
@@ -55,6 +57,61 @@
             <use href="./images/icons.svg#icon-logo"></use>
           </svg>
         </a>
+        <!-- <button class="header__btn" type="button" data-menu-button aria-expanded="false">
+          <svg class="header__btn-icon" width="40" height="40" fill="black">
+            <use class="icon-open" href="./images/icons.svg#menu-open" data-modal-open></use>
+            <use class="icon-close" href="./images/icons.svg#menu-close" data-modal-close></use>
+          </svg>
+        </button> -->
+
+        <button class="header__btn-hamburger hamburger hamburger--spring" type="button" data-menu-button aria-expanded="false">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+
+        <div class="mobile-menu" data-menu>
+          <ul class="mobile-menu__list list">
+            <li class="mobile-menu__item">
+              <a class="link" href="">О нас</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="link" href="">Услуги и цены</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="link" href="">Мастера</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="link" href="">Контакты</a>
+            </li>
+          </ul>
+
+          <ul class="mobile-menu__list list">
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__phone link" href="tel:+380441111111"
+                >+38 044 111 11 11</a
+              >
+            </li>
+            <li class="mobile-menu__item">
+              <button
+                class="mobile-menu__btn btn btn--mode-light"
+                type="button"
+                data-modal-open
+              >
+                онлайн-запись
+              </button>
+            </li>
+          </ul>
+
+          <div class="mobile-menu__socials list">
+            <div class="mobile-menu__item">
+              <a class="mobile-menu__link link" href="">Instagram</a>
+              <a class="mobile-menu__link link" href="">Youtube</a>
+            </div>
+          </div>
+
+        </div>
+
         <nav class="nav">
           <ul class="nav__list list">
             <li class="nav__item">
@@ -71,7 +128,7 @@
             </li>
           </ul>
         </nav>
-        <div class="header-wrapper">
+        <div class="header__wrapper">
           <a class="header-phone link" href="tel:+380441111111"
             >+38 044 111 11 11</a
           >
@@ -85,7 +142,7 @@
     <!-- Unique part -->
     <main>
       <!-- Hero section -->
-      <section class="hero">
+      <!-- <section class="hero">
         <div class="hero__container container">
           <div class="hero__left-side">
             <ul class="hero__list hero__list--rotate list">
@@ -122,14 +179,14 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- About us section -->
       <section class="about section">
         <div class="about-container container">
           <ul class="about-list list">
             <li class="about-item">
               <img
-                src="./images/about-us/img-1.jpg"
+                src="./images/about-us/img-1-md.jpg"
                 alt="Стрижка бороды"
                 width="270"
                 height="445"
@@ -137,7 +194,7 @@
             </li>
             <li class="about-item">
               <img
-                src="./images/about-us/img-1.jpg"
+                src="./images/about-us/img-1-md.jpg"
                 alt="Стрижка бороды"
                 width="270"
                 height="445"
@@ -148,9 +205,9 @@
           <div class="about-wrapper">
             <p class="uppertitle uppertitle--mode-light">О НАС</p>
             <h2 class="title title--mode-light">
-              Лучший Барбершоп твоего города
+              Лучший Барбершоп твоего&nbsp;города
             </h2>
-            <h3 class="about-subtitle subtitle subtitle--mode-light">
+            <h3 class="subtitle subtitle--mode-light">
               Если ты хочешь добавить в свой образ больше уверенности – тебе
               точно к нам.
             </h3>
@@ -218,7 +275,7 @@
         </div>
       </section>
       <!-- Why us section -->
-      <section class="why section">
+      <!-- <section class="why section">
         <div class="container why-container">
           <ul class="why-list list">
             <li class="why-item">
@@ -252,9 +309,9 @@
             </h3>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- Team section -->
-      <section class="team section">
+      <!-- <section class="team section">
         <div class="container">
           <p class="uppertitle uppertitle--mode-light">
             для настоящих ценителей атмосферы
@@ -408,9 +465,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!-- Portfolio section -->
-      <section class="portfolio section">
+      <!-- <section class="portfolio section">
         <div class="container">
           <p class="uppertitle uppertitle--mode-light">
             На латинском языке “барба” означает “борода”
@@ -451,9 +508,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!-- Contacts section -->
-      <section class="contacts section">
+      <!-- <section class="contacts section">
         <div class="container contacts-container">
           <h2 class="visually-hidden">Онлайн-запись</h2>
           <article class="contacts-left-side">
@@ -547,30 +604,39 @@
             </div>
           </article>
         </div>
-      </section>
+      </section> -->
     </main>
 
     <!-- Footer section -->
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container footer-container">
-        <p class="footer-copyright">&#169; Copyright 2020</p>
-        <ul class="footer-list list">
-          <li class="footer-item">
-            <a class="footer-link link" href="">Instagram</a>
-          </li>
-          <li class="footer-item">
-            <a class="footer-link link" href="">Youtube</a>
-          </li>
+        <div class="wrapper">
+          <p class="footer-copyright">&#169; Copyright 2020</p>
+          <ul class="footer-list list">
+            <li class="footer-item">
+              <a class="footer-link link" href="">Instagram</a>
+            </li>
+            <li class="footer-item">
+              <a class="footer-link link" href="">Youtube</a>
+            </li>
+          </ul>
+        </div>
+        <ul class="sicoals">
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
         </ul>
+
       </div>
-    </footer>
+    </footer> -->
 
     <!-- Modal window -->
-    <div class="backdrop is-hidden" data-modal>
+    <!-- <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-btn" type="button" data-modal-close>X</button>
       </div>
-    </div>
+    </div> -->
 
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -579,5 +645,6 @@
     ></script>
     <script src="./js/modal.js"></script>
     <script src="./js/header.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

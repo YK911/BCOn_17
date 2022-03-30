@@ -2,6 +2,7 @@
 @import "./utils/variables";
 @import "./utils/placeholders";
 @import "./utils/mixins";
+@import "./utils/hamburgers/hamburgers.scss";
 
 // Common styles
 @import "./base/base";
@@ -13,6 +14,8 @@
 
 // Components styles
 @import "./components/header";
+@import "./components/mobile-menu";
+
 @import "./components/hero";
 @import "./components/about";
 @import "./components/services";
