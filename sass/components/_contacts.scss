@@ -3,9 +3,17 @@
     color: var(--main-txt_mode-dark);
     background-color: var(--primary-bg_mode-dark);
 
-    background-image: url(../images/contacts/contacts-bg.png);
     background-repeat: no-repeat;
     background-position: top 50% left calc(50% + 312px);
+    background-size: 625px 644px;
+
+    background-image: url(../images/contacts/contacts-bg.png);
+    background-image: -webkit-image-set(url(../images/contacts/contacts-bg.webp) 1x);
+
+    @include mq(retina) {
+      background-image: url(../images/contacts/contacts-bg@2x.png);
+      background-image: -webkit-image-set(url(../images/contacts/contacts-bg@2x.webp) 2x);
+    }
   }
 
   .contacts-container {

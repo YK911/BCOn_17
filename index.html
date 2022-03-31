@@ -43,14 +43,17 @@
       href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
     />
     <!-- Math module for SASS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sass-math@1.0.0/_math.scss">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sass-math@1.0.0/_math.scss"
+    />
     <!-- Main styles -->
     <link rel="stylesheet" href="./css/main.min.css" />
     <!-- <link rel="stylesheet" href="./css/style.css" /> -->
   </head>
   <body>
     <!-- Header section -->
-    <header class="header">
+    <header hidden class="header">
       <div class="container header__container">
         <a class="header__link link" href="./index.html" aria-label="Логотип">
           <svg class="header__logo header__logo--big" width="70" height="56">
@@ -64,7 +67,12 @@
           </svg>
         </button> -->
 
-        <button class="header__btn-hamburger hamburger hamburger--spring" type="button" data-menu-button aria-expanded="false">
+        <button
+          class="header__btn-hamburger hamburger hamburger--spring"
+          type="button"
+          data-menu-button
+          aria-expanded="false"
+        >
           <span class="hamburger-box">
             <span class="hamburger-inner"></span>
           </span>
@@ -109,7 +117,6 @@
               <a class="mobile-menu__link link" href="">Youtube</a>
             </div>
           </div>
-
         </div>
 
         <nav class="nav">
@@ -186,6 +193,7 @@
           <ul class="about-list list">
             <li class="about-item">
               <img
+                class="about-img"
                 src="./images/about-us/img-1-md.jpg"
                 alt="Стрижка бороды"
                 width="270"
@@ -194,6 +202,7 @@
             </li>
             <li class="about-item">
               <img
+                class="about-img"
                 src="./images/about-us/img-1-md.jpg"
                 alt="Стрижка бороды"
                 width="270"
@@ -275,8 +284,21 @@
         </div>
       </section>
       <!-- Why us section -->
-      <!-- <section class="why section">
+      <section class="why section">
         <div class="container why-container">
+          <div class="why-wrapper">
+            <p class="uppertitle uppertitle--mode-light">
+              старая традиционная школа
+            </p>
+            <h2 class="title title--mode-light">
+              Почему приходят именно к нам?
+            </h2>
+            <h3 class="subtitle subtitle--mode-light">
+              О нас говорят только хорошее. Но лучше 1 раз увидеть и
+              прочувствовать, чем 10 раз прочитать.
+            </h3>
+          </div>
+
           <ul class="why-list list">
             <li class="why-item">
               <p class="why-quantity">600</p>
@@ -295,32 +317,23 @@
               <p class="why-description">Подарков постоянным клиентам</p>
             </li>
           </ul>
-
-          <div class="why-wrapper">
-            <p class="uppertitle uppertitle--mode-light">
-              старая традиционная школа
-            </p>
-            <h2 class="title title--mode-light">
-              Почему приходят именно к нам?
-            </h2>
-            <h3 class="subtitle subtitle--mode-light">
-              О нас говорят только хорошее. Но лучше 1 раз увидеть и
-              прочувствовать, чем 10 раз прочитать.
-            </h3>
-          </div>
         </div>
-      </section> -->
+      </section>
       <!-- Team section -->
-      <!-- <section class="team section">
+      <section class="team section">
         <div class="container">
-          <p class="uppertitle uppertitle--mode-light">
-            для настоящих ценителей атмосферы
-          </p>
-          <h2 class="title title--mode-light">Наши мастера</h2>
+          <div class="team-title-wrapper">
+            <p class="uppertitle uppertitle--mode-light">
+              для настоящих ценителей атмосферы
+            </p>
+            <h2 class="title title--mode-light">Наши мастера</h2>
+          </div>
           <ul class="team-list list">
             <li class="team-item">
               <img
                 class="team-avatar"
+                srcset="./images/team/member-1-370w.jpg 370w, ./images/team/member-1-418w.jpg 418w, ./images/team/member-1-450w.jpg 450w"
+                sizes="(min-width: 768px) 450w, (max-width: 767px) 418w, 100vw"
                 src="./images/team/member-1.jpg"
                 alt="Главный барбер"
                 width="370"
@@ -368,12 +381,38 @@
               </div>
             </li>
             <li class="team-item">
-              <img
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/member-2-lg.jpg
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/team/member-2-md.jpg
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <img
+                  class="team-img"
+                  src="./images/team/member-2-sm.jpg"
+                  alt="Стрижка под машинку"
+                  width="418"
+                  height="346"
+                  loading="lazy"
+                />
+              </picture>
+
+              <!-- <img
+                class="team-avatar"
                 src="./images/team/member-2.jpg"
                 alt="Старший барбер"
                 width="370"
                 height="346"
-              />
+              /> -->
               <div class="team-wrapper">
                 <h3 class="team-name" lang="en">Michele Doe</h3>
                 <p class="team-position" lang="en">Extreme Barber</p>
@@ -417,6 +456,7 @@
             </li>
             <li class="team-item">
               <img
+                class="team-avatar"
                 src="./images/team/member-3.jpg"
                 alt="Начинающий барбер"
                 width="370"
@@ -465,9 +505,9 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- Portfolio section -->
-      <!-- <section class="portfolio section">
+      <section class="portfolio section">
         <div class="container">
           <p class="uppertitle uppertitle--mode-light">
             На латинском языке “барба” означает “борода”
@@ -475,40 +515,179 @@
           <h2 hidden>Портфолио работ</h2>
           <ul class="portfolio-list list">
             <li class="portfolio-item">
-              <img
-                src="./images/portfolio/img-1.jpg"
+              <picture>
+                <!-- <source srcset="./images/portfolio/img-1-lg.webp 1x, ./images/portfolio/img-1-lg@2x.webp 2x" media="(min-width: 1200px)" type="image/webp" /> -->
+                <source
+                  srcset="
+                    ./images/portfolio/img-1-lg.jpg    1x,
+                    ./images/portfolio/img-1-lg@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+
+                <!-- <source srcset="./images/portfolio/img-1-md.webp 1x, ./images/portfolio/img-1-md@2x.webp 2x" media="(min-width: 768px)" type="image/webp" /> -->
+                <source
+                  srcset="
+                    ./images/portfolio/img-1-md.jpg    1x,
+                    ./images/portfolio/img-1-md@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+
+                <!-- <source srcset="./images/portfolio/img-1-sm.webp 1x, ./images/portfolio/img-1-sm@2x.webp 2x" media="(max-width: 767px)" type="image/webp" /> -->
+                <source
+                  srcset="./images/portfolio/img-1-sm@2x.jpg"
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+
+                <img
+                  class="portfolio-image"
+                  src="./images/portfolio/img-1-sm.jpg"
+                  alt="Стрижка под машинку"
+                  width="270"
+                  height="360"
+                  loading="lazy"
+                />
+              </picture>
+              <!-- <img
+                srcset="
+                  ./images/portfolio/img-1-sm.jpg  418w,
+                  ./images/portfolio/img-1-sm@2x.jpg 836w,
+                  ./images/portfolio/img-1-md.jpg  330w,
+                  ./images/portfolio/img-1-md@2x.jpg 660w,
+                  ./images/portfolio/img-1-lg.jpg  270w,
+                  ./images/portfolio/img-1-lg@2x.jpg 540w
+                "
+                sizes="(min-width: 768px) 330w, (min-width: 320px) 418w, 100vw"
+                src="./images/portfolio/img-1-sm.jpg"
                 alt="Стрижка под машинку"
                 width="270"
                 height="360"
-              />
+              /> -->
             </li>
             <li class="portfolio-item">
-              <img
+              <picture>
+                <source
+                  srcset="
+                    ./images/portfolio/img-2-lg.jpg    1x,
+                    ./images/portfolio/img-2-lg@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/portfolio/img-2-md.jpg    1x,
+                    ./images/portfolio/img-2-md@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="./images/portfolio/img-2-sm@2x.jpg"
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+                <img
+                  class="portfolio-image"
+                  src="./images/portfolio/img-2-sm.jpg"
+                  alt="Стрижка под машинку"
+                  width="270"
+                  height="360"
+                  loading="lazy"
+                />
+              </picture>
+              <!-- <img
                 src="./images/portfolio/img-2.jpg"
                 alt="Бритье бороды"
                 width="270"
                 height="360"
-              />
+              /> -->
             </li>
             <li class="portfolio-item">
-              <img
+              <picture>
+                <source
+                  srcset="
+                    ./images/portfolio/img-3-lg.jpg    1x,
+                    ./images/portfolio/img-3-lg@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/portfolio/img-3-md.jpg    1x,
+                    ./images/portfolio/img-3-md@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="./images/portfolio/img-3-sm@2x.jpg"
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+                <img
+                  class="portfolio-image"
+                  src="./images/portfolio/img-3-sm.jpg"
+                  alt="Стрижка под машинку"
+                  width="270"
+                  height="360"
+                  loading="lazy"
+                />
+              </picture>
+              <!-- <img
                 src="./images/portfolio/img-3.jpg"
                 alt="Распаривание лица"
                 width="270"
                 height="360"
-              />
+              /> -->
             </li>
             <li class="portfolio-item">
-              <img
+              <picture>
+                <source
+                  srcset="
+                    ./images/portfolio/img-4-lg.jpg    1x,
+                    ./images/portfolio/img-4-lg@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/portfolio/img-4-md.jpg    1x,
+                    ./images/portfolio/img-4-md@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="./images/portfolio/img-4-sm@2x.jpg"
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+                <img
+                  class="portfolio-image"
+                  src="./images/portfolio/img-4-sm.jpg"
+                  alt="Стрижка под машинку"
+                  width="270"
+                  height="360"
+                  loading="lazy"
+                />
+              </picture>
+              <!-- <img
                 src="./images/portfolio/img-4.jpg"
                 alt="Стрижка опасной бритвой"
                 width="270"
                 height="360"
-              />
+              /> -->
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- Contacts section -->
       <!-- <section class="contacts section">
         <div class="container contacts-container">

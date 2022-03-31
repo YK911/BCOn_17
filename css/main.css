@@ -174,9 +174,8 @@ p {
 
 img {
   display: block;
-  max-width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 100%;
+  height: auto;
 }
 
 .visually-hidden {
@@ -370,6 +369,12 @@ img {
   position: relative;
   margin-left: auto;
   z-index: 1000;
+}
+
+@media screen and (min-width: 768px) {
+  .header__btn-hamburger {
+    display: none;
+  }
 }
 
 .icon-open {
@@ -785,6 +790,11 @@ img {
   }
 }
 
+.about-img {
+  height: 100%;
+  object-fit: cover;
+}
+
 .about-container {
   display: flex;
 }
@@ -939,26 +949,54 @@ img {
 }
 
 /* Why us section */
-.why-container {
-  display: flex;
-  justify-content: center;
+@media screen and (min-width: 1200px) {
+  .why-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
 }
 
 .why-list {
-  width: 370px;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  margin-right: 130px;
+}
+
+@media screen and (min-width: 768px) {
+  .why-list {
+    width: 450px;
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .why-list {
+    width: 370px;
+    margin-right: 130px;
+  }
 }
 
 .why-item {
-  width: 170px;
+  width: 195px;
   min-height: 133px;
-  padding: 20px 24px;
+  padding: 20px 32px;
   text-align: center;
   color: var(--secondary-txt_mode-light);
   background-color: var(--primary-bg_mode-light);
+}
+
+@media screen and (min-width: 768px) {
+  .why-item {
+    padding: 20px 40px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .why-item {
+    width: 170px;
+    padding: 20px 24px;
+  }
 }
 
 .why-item:nth-child(2n) {
@@ -966,8 +1004,16 @@ img {
   margin-left: 30px;
 }
 
-.why-wrapper {
-  width: 500px;
+@media screen and (max-width: 1199.98px) {
+  .why-wrapper {
+    margin-bottom: 44px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .why-wrapper {
+    width: 500px;
+  }
 }
 
 .why-quantity {
@@ -1000,22 +1046,44 @@ img {
   background-color: var(--primary-bg_mode-light);
 }
 
-.team-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: -30px;
-  margin-left: -30px;
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .team-title-wrapper {
+    width: 450px;
+    margin: 0 auto;
+  }
 }
 
-.team-item {
-  flex-basis: calc(100% / 3 - 30px);
-  margin-top: 30px;
-  margin-left: 30px;
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .team-list {
+    width: 450px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -30px;
+    margin-left: -30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-item {
+    flex-basis: calc(100% / 3 - 30px);
+    margin-top: 30px;
+    margin-left: 30px;
+  }
 }
 
 .team-wrapper {
   padding: 30px;
   text-align: center;
+}
+
+.team-avatar {
+  margin: 0 auto;
 }
 
 .team-name {
@@ -1077,22 +1145,49 @@ img {
 
 /* Portfolio section */
 .portfolio-list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  margin: -15px;
 }
 
-.portfolio-item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 768px) {
+  .portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
+.portfolio-item {
+  margin: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-item {
+    flex-basis: calc(100% / 2 - 30px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-item {
+    flex-basis: calc(100% / 4 - 30px);
+  }
 }
 
 /* Contacts section */
 .contacts {
   color: var(--main-txt_mode-dark);
   background-color: var(--primary-bg_mode-dark);
-  background-image: url(../images/contacts/contacts-bg.png);
   background-repeat: no-repeat;
   background-position: top 50% left calc(50% + 312px);
+  background-size: 625px 644px;
+  background-image: url(../images/contacts/contacts-bg.png);
+  background-image: -webkit-image-set(url(../images/contacts/contacts-bg.webp) 1x);
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (-moz-min-device-pixel-ratio: 2), screen and (-o-min-device-pixel-ratio: 2 / 1), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .contacts {
+    background-image: url(../images/contacts/contacts-bg@2x.png);
+    background-image: -webkit-image-set(url(../images/contacts/contacts-bg@2x.webp) 2x);
+  }
 }
 
 .contacts-container {

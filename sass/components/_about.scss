@@ -27,9 +27,16 @@
     margin-right: 30px;
   }
 }
+
+.about-img {
+  height: 100%;
+  object-fit: cover;
+}
+
 .about-container {
   display: flex;
 }
+
 .about-wrapper {
   width: 500px;
   margin-left: auto;

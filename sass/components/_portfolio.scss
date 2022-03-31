@@ -1,11 +1,27 @@
 /* Portfolio section */
 
 .portfolio-list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  margin: -15px;
+  // margin-bottom: -30px;
+
+  @include mq(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    // margin-right: -30px;
+  }
 }
 
-.portfolio-item:not(:last-child) {
-  margin-right: 30px;
+.portfolio-item {
+  margin: 15px;
+
+  @include mq(tablet) {
+    flex-basis: calc(100% / 2 - 30px);
+    // margin-right: 30px;
+  }
+
+  @include mq(desktop) {
+    flex-basis: calc(100% / 4 - 30px);
+  }
 }

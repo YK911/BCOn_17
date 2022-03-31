@@ -56,6 +56,10 @@
   position: relative;
   margin-left: auto;
   z-index: 1000;
+
+  @include mq(tablet) {
+    display: none;
+  }
 }
 
 .icon-open {
