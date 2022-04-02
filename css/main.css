@@ -251,7 +251,7 @@ img {
   align-items: center;
   margin-bottom: 20px;
   font-size: 11px;
-  line-height: 1.36;
+  line-height: 0.73;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -284,7 +284,7 @@ img {
 .title {
   font-family: var(--secondary-font);
   font-size: 42px;
-  line-height: 1.14;
+  line-height: 0.73;
   font-weight: 400;
   letter-spacing: 0.05em;
   color: var(--secondary-txt-cl);
@@ -304,7 +304,7 @@ img {
 
 .subtitle {
   font-size: 18px;
-  line-height: 1.67;
+  line-height: 0.73;
   font-weight: 400;
   letter-spacing: 0.02em;
   color: var(--main-txt-cl);
@@ -601,7 +601,7 @@ img {
   background-color: var(--secondary-txt_mode-dark);
   z-index: 100;
   font-size: 18px;
-  line-height: 1.39;
+  line-height: 0.73;
   font-weight: 600;
   letter-spacing: 0.1em;
   color: var(--secondary-txt_mode-light);
@@ -1177,7 +1177,7 @@ img {
   color: var(--main-txt_mode-dark);
   background-color: var(--primary-bg_mode-dark);
   background-repeat: no-repeat;
-  background-position: top 50% left calc(50% + 312px);
+  background-position: top 50% left calc(50% + 322px);
   background-size: 625px 644px;
   background-image: url(../images/contacts/contacts-bg.png);
   background-image: -webkit-image-set(url(../images/contacts/contacts-bg.webp) 1x);

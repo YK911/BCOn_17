@@ -48,6 +48,7 @@ $font-vars: (
   $font-size: $fs-nounits + $px;
 
   $line-height: setLineHeight(strip-unit($lh), strip-unit($fs));
+  $line-height: setLineHeight(11, 15);
 
   $font-weight: strip-unit($fw);
 
